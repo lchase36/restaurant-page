@@ -1,11 +1,16 @@
 const createMenu = () => {
   const content = document.createElement("div");
   content.setAttribute("id", "menu");
+
+  const menuHead = document.createElement("div");
+  menuHead.setAttribute("id", "menu-head");
   const title = document.createElement("h1");
   title.textContent = "Menu";
-
-  const menuItems = document.createElement("div");
-  menuItems.setAttribute("id", "menu-items");
+  const subtitle = document.createElement("p");
+  subtitle.textContent =
+    "All produce and meats sourced through partnership with our local farming community.";
+  menuHead.appendChild(title);
+  menuHead.appendChild(subtitle);
 
   const createPlate = (name, desc, numPrice) => {
     const item = document.createElement("div");
@@ -27,11 +32,11 @@ const createMenu = () => {
     return item;
   };
 
-  content.appendChild(title);
+  content.appendChild(menuHead);
   content.appendChild(
     createPlate(
       "Margherita",
-      "Our homemade crust baked with layers of extra virgin olive oil, fresh mozzarella, sliced tomatoes and basil - all grown at our local partner farms.",
+      "Our homemade crust baked with layers of extra virgin olive oil, fresh mozzarella, sliced tomatoes and basil.",
       12.99
     )
   );
@@ -47,6 +52,13 @@ const createMenu = () => {
       "Combination",
       "A gourmet mix of italian sausage, pepperoni, onions, black olives, green peppers, and fresh mozzarella.",
       15.99
+    )
+  );
+  content.appendChild(
+    createPlate(
+      "Hawaiian",
+      "For those that want to ruin a perfectly good pepperoni pizza by adding pineapple.",
+      57.99
     )
   );
   return content;
