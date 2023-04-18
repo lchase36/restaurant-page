@@ -45,3 +45,104 @@ body,
   font-weight: bold;
   font-size: 20px;
 }
+
+#container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#container h1 {
+  margin: 0 0 10px 0;
+}
+
+#container > * {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+#contact,
+#menu {
+  color: whitesmoke;
+}
+
+#menu {
+  height: 100%;
+  width: clamp(400px, 80%, 1400px);
+  border-left: 2px solid rgb(251, 195, 140);
+  border-right: 2px solid rgb(251, 195, 140);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  box-sizing: border-box;
+  width: clamp(400px, 80%, 1400px);
+  height: max(530, 80%);
+  border: 2px solid rgb(251, 195, 140);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 20px;
+}
+
+#info > p {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+address {
+  margin-top: 50px;
+}
+
+#home {
+  color: whitesmoke;
+  justify-content: center;
+  gap: 10px;
+}
+
+#home h1 {
+  font-size: 42px;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 100%;
+  width: 80%;
+}
+
+.menu-item {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  padding: 10px;
+  display: grid;
+  grid-template:
+  "name name name price" 40px
+  "desc desc desc desc"
+  / auto auto auto 150px;
+}
+.menu-item > h2 {
+  grid-area: name;
+  margin: 0;
+}
+
+.menu-item > span:nth-child(2) {
+  grid-area: desc;
+}
+.menu-item > span:nth-child(3) {
+  grid-area: price;
+  font-size: 20px;
+}

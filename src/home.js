@@ -1,10 +1,11 @@
 const createHome = () => {
-  const home = document.createElement("div");
+  const content = document.createElement("div");
+  content.setAttribute("id", "home");
   const title = document.createElement("h1");
   title.textContent = "Pie in the Sky";
 
-  home.appendChild(title);
-  return home;
+  content.appendChild(title);
+  return content;
 };
 
 export default createHome;
